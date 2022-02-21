@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <title>booking form</title>
+    <script>
+        var cityObject = {
+            "JHAJHA": {
+                "HOTEL-1": [],
+                "HOTEL-2": [],
+                "HOTEL-3": []
+            },
+            "DEOGHAR": {
+                "HOTEL-1.1": [],
+                "HOTEL-1.2": []
+            }
+        }
+        window.onload = function () {
+            var citySel = document.getElementById("city");
+            var hotelsSel = document.getElementById("hotels");
+
+            for (var x in cityObject) {
+                citySel.options[citySel.options.length] = new Option(x, x);
+            }
+            citySel.onchange = function () {
+                //empty HOTELS-dropdowns
+                hotelsSel.length = 1;
+                //display correct values
+                for (var y in cityObject[this.value]) {
+                    hotelsSel.options[hotelsSel.options.length] = new Option(y, y);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="flex-container1">
+        <a href="index.html"><img class="flex-item1" src="logo.jpeg"></a>  
+        <div class="flex-item2">
+            <a class="active" href="index.html">HOME</a>
+            <a href="booking.html">BOOKING</a>
+            <a href="About_event.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <div class="dropdown">
+                <a>SETTING</a>
+                <div class="dropdown-content">
+                    <a href="bookdetails.php">Booking Details</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="theme.html">Theme</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="logout.php">Log Out</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <center>
+        <div class="booking_container">
+            <div class="title">BOOKING</div>
+            <form name="form1" id="form1" action="#">
+                <div class="user-details">
+                    <div class="sel-opt">
+                        <span class="details">EVENT NAME</span><br>
+                        <select>
+                            <option value="none">NONE</option>
+                            <option value="evn_2">Event-2</option>
+                            <option value="evn_3">Evwnt-3</option>
+                            <option value="evn_4">Event-4</option>
+                            <option value="evn_5">Event-5</option>
+                            <option value="evn_6">Event-6</option>
+                            <option value="evn_7">Event-7</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">EVENTS STARTING DATE</span>
+                        <input type="date" placeholder="Events Starting Date" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">EVENTS END DATE</span>
+                        <input type="date" placeholder="Events End Date" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">EVENTS THEME</span>
+                        <input type="text" placeholder="Events Theme" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">EVENT DURACTION</span>
+                        <input type="text" placeholder="Events Duraction" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">VENUE NAME</span>
+                        <input type="text" placeholder="Venue Name" required>
+                    </div>
+
+                    <div class="sel-opt">
+                        <span class="details">VENUE LOCATION</span><br>
+                        <select name="city" id="city">
+                            <option value="" selected="selected">Select City</option>
+                        </select><br>
+                        <select name="hotels" id="hotels">
+                            <option value="" selected="selected">Please select Hotels</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">CONTACT NUMBER</span>
+                        <input type="text" placeholder="Contact Number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">AADHAAR NUMBER</span>
+                        <input type="int" placeholder="Aadhar number" required>
+                    </div>
+                    <div class="sel-opt">
+                        <span class="details">FOOD</span><br>
+                        <select>
+                            <option value="none">NONE</option>
+                            <option value="veg">Veg</option>
+                            <option value="nonveg">Nonveg</option>
+                            <option value="both">Both veg & nonveg</optio>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">DECORATION</span>
+                        <input type="text" placeholder="Decoration" required>
+                    </div>
+
+                </div>
+                <div class="button">
+                    <input type="submit" value="Booked">
+                </div>
+            </form>
+        </div>
+    </center>
+    <footer class="footer">
+        <div class="footer-column">
+            <h4>COMPANY</h4>
+            <div class="links">
+                <a href='privacy.html'>Privacy Policy</a>
+                <a href="about.html">About Developers</a>
+                <p>Copyright - 2019 - 2022 All rights reserved</p>
+                <p>xyz@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>FOLLOW US</h4>
+            <div class="social-links">
+                <a href='#'><i class=" fab fa-facebook-f"></i></a>
+                <a href='#'><i class=" fab fa-twitter"></i></a>
+                <a href='#'><i class=" fab fa-instagram"></i></a>
+                <a href='#'><i class=" fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

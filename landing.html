@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="flex-container1">
+        <img class="flex-item1" src="logo.jpeg">
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="slideshow">
+                <div class="Slides">
+                    <img src="C:\xampp\htdocs\damech\images\Services.jpg">
+                </div>
+                <div class="Slides">
+                    <img src="C:\xampp\htdocs\damech\images\air-conditioner.png">
+                </div>
+                <div class="Slides">
+                    <img src="C:\xampp\htdocs\damech\images\inverter.jpg">
+                </div>
+                <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="nex" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='' class='input-field' placeholder='First Name' required>
+                    <input type='' class='input-field' placeholder='Last Name ' required>
+                    <input type='email' class='input-field' placeholder='Email Id' required>
+                    <input  type='' class='input-field' placeholder='Aadhaar Number' required>
+                    <input type='' class='input-field' placeholder='Mobile Number' required>
+                    <input type='' class='input-field' placeholder='Address' required>
+                    <input type='' class='input-field' placeholder='District' required>
+                    <input type='' class='input-field' placeholder='State' required>
+                    <input type='' class='input-field' placeholder='Nationality' required>
+                    <input type='' class='input-field' placeholder='Pin Code' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                   <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Slides");
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+
+        }
+    </script>
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
