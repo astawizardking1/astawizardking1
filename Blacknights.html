@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Blacknights </title>
+	</head>
+	<body bgcolor="lightgreen">
+		<center> <img src="logo.png" alt="SDA" width="550" height="100"></center>
+
+		<center><h2> Registration Form </center></h2>
+
+		<form action= "insert.php" method= "post">
+
+			<label for="stname">Student Name:  </label><br>
+			<input type="text"placeholder="Enter student name" name="stname"> <br><br>
+
+			<label for="faname">Father's Name: </label><br> 
+			<input type="text"placeholder="Enter your father's name"name="faname"> <br><br>
+
+			<label for="moname">Mother's Name: </label><br> 
+			<input type="text"placeholder="Enter your mother's name"name="moname"> <br><br>
+
+			<label for="doa">Date Of Admission:</label><br>
+			<input type="date"name="doa"><br><br>
+
+			<label for="adn">Admission no.:</label><br>
+			<input type="text"placeholder="Admission no." maxlength="10" size="10"name="adn"> <br><br>
+
+			<label for="dob">Date Of Birth:</label><br>
+  			<input type="date"name="dob"><br><br>
+
+			<label for="session">Session:</label><br>
+			<input type="month"name="session"><br><br>
+
+			<label for="class">Class:</label><br>
+			<input type="text"maxlength="12"size="12"name="class"> <br><br>
+
+			<label for="roll">Roll no.:</label><br>
+			<input type="text"maxlength="3" size="3"name="roll"> <br><br>
+
+			 <label for="stream">Choose your stream:</label> 
+			<select name="stream">
+    			<option value="arts">Arts</option>
+    			<option value="commerce">Commerce</option>
+    			<option value="science">Science</option>
+  			</select><br><br>
+
+			<label for="pwd">Password: </label><br> 
+			<input type="password"placeholder="Enter your password"name="pwd"> <br><br>
+
+			 <label for="phone">Phone no.: </label><br>
+			<input type="text"placeholder="Enter your phone no." maxlength="10" size="10"name="phone"> <br><br>
+
+		 	<label for="aphone">Alternate phone no.: </label><br> 
+			<input type="text"placeholder="Enter your phone no."maxlength="10" size="10"name="aphone"> <br><br>
+			
+			<label for="gender">Select Gender:</label>
+			<input type= "radio" name="gender" value="male">Male
+			<input type= "radio" name="gender" value="female">female
+			<input type= "radio" name="gender" value="other">Other<br><br>
+
+			<label for="email">E mail ID: </label><br>
+			<input type="email"name="email"><br><br>
+
+			
+			 <label for="padd">Permanent Address:</label><br>
+			<input type="text" name="padd"><br><br>
+
+			 <label for="dis">District:</label><br>
+			<input type="text"name="dis"><br><br>
+
+			 <label for="pin">Pincode:</label><br>
+			<input type="text" id="pin" name="pin" maxlength="6" size="6"name="pin"><br><br>
+
+			 <label for="state">State:</label><br>
+			<input type="text"name="state"><br><br>
+
+			<label for="cadd">Coresspondence Address:</label><br>
+			<textarea name="cadd" rows="10" cols="80"></textarea><br><br>
+			
+			 <label for="rel">Religion:</label><br>
+			<input type="text" name="rel"><br><br>
+			
+			<label for= "category">Category: </label>
+			<input type="radio" name="category"value="sc">SC
+			<input type="radio" name="category"value="st">ST
+			<input type="radio" name="category"value="obc1">OBC 1
+			<input type="radio" name="category"value="obc2">OBC 2
+			<input type="radio" name= "category"value="general">General<br>
+
+
+			<br ><button type="submit" value="submit">SUBMIT</button>
+			
+		</form>
+	</body>
+</html>
